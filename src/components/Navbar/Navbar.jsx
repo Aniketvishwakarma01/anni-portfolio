@@ -2,8 +2,8 @@ import { RiCloseLine, RiMenu2Line } from '@remixicon/react';
 import React, { useState } from 'react'
 
 const Navbar = () => {
-    const [menu, openMenu]= useState(false);
-    const [showMenu, setShowMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
+
   return (
     <nav className="flex flex-wrap justify-between md:items-center text-white px-10 pt-6 ms:px-20">
       <span className="text-4xl font-bold tracking-wider text-gradient bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
@@ -26,14 +26,20 @@ const Navbar = () => {
             <li className="text-md transition-all duration-300 p-1 md:p-0">Contact</li>
             </a>
         </ul>
-      {showMenu? (
-        <RiMenu2Line size={30} className="md:hidden absolute right-10 top-6 transition-all duraction-300" 
-        onClick={()=>{
-            openMenu(!menu) ; setShowMenu(!showMenu);
-        }}/>
-      ):<RiCloseLine size={30}  className="md:hidden absolute right-10 top-6 transition-all duraction-300"/>}
+      {menu? (
+        <RiCloseLine size={30} className="md:hidden absolute right-10 top-6 transition-all duration-300" 
+        onClick={()=>
+            setMenu(false)
+        }/>
+      ):(
+      <RiMenu2Line size={30} className="md:hidden absolute right-10 top-6 transition-all duration-300"
+    onClick={()=>
+      setMenu(true)
+    }
+    />
+  )}
     </nav>
   )
-}
+};
 
 export default Navbar
