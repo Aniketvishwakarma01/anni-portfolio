@@ -7,10 +7,9 @@ const Navbar = () => {
   return (
     <nav className="flex flex-wrap justify-between md:items-center text-white px-10 pt-6 ms:px-20">
       <span className="relative inline-block text-4xl font-bold tracking-wider bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse transition-transform duration-300 hover:scale-110">
-  AV
-  <span className="text-green-400 absolute -top-1 -right-2 animate-bounce">.</span>
-</span>
-
+        AV
+        <span className="text-green-400 absolute -top-1 -right-2 animate-bounce">.</span>
+      </span>
         <ul className={`${
             menu?"block":"hidden"
         }    mx-24 py-2 mt-4 font-semibold md:mt-5 bg-black px-2 rounded-xl bg-opacity-30 md:border-none

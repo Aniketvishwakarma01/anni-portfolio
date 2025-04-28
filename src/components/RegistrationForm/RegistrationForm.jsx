@@ -50,8 +50,8 @@ const RegistrationForm = () => {
 
   return (
     <div className="flex items-center justify-center ">
-      <div className="w-80">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-5">Registration</h2>
+      <div className="w-full max-w-md px-4 py-6 bg-white rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-5">Contact Me</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">Name</label>

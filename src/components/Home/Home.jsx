@@ -27,14 +27,14 @@ const Home = () => {
       </div>
       {showForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg w-full max-w-sm relative max-h-[500px] overflow-auto">
+          <div className="bg-white rounded-lg shadow-lg w-80  relative max-h-[500px] overflow-auto">
             <button
               onClick={() => setShowForm(false)} // Close form on cross button
               className="absolute top-2 right-2 text-2xl font-bold text-gray-600"
             >
               &times;
             </button>
-            <div className="text-gray-800 p-4">
+            <div className="text-gray-800 p">
               <RegistrationForm />
             </div>
           </div>
